@@ -4,12 +4,14 @@ import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
 import { router } from "better-auth/api";
+import { redirect } from "next/navigation";
 
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
   const handleSignOut = async () => {
     await authClient.signOut({});
+    redirect('/sign-in')
   };
   return (
     <div className=" bg-base-100 shadow-sm">

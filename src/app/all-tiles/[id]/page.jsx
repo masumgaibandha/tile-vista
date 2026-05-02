@@ -6,13 +6,11 @@ const TilesDetailsPage = async({params}) => {
     const res = await fetch('https://tile-vista.vercel.app/data.json')
     const tiles = await res.json()
     const tilesDetails = tiles.find(tile => tile.id === id)
-    console.log(tilesDetails)
+
     return (
         <div>
-           
-            {
-                tilesDetails.map(tile => <TilesDetails key={tile.id} tile={tile}></TilesDetails>)
-            }
+           <TilesDetails tile={tilesDetails} />
+
         </div>
     );
 };

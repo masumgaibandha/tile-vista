@@ -2,6 +2,7 @@
 import { UpdateUserModal } from "@/component/UpdateProfileModal";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Card } from "@heroui/react";
+import { redirect } from "next/navigation";
 
 const ProfilePage = () => {
   const userData = authClient.useSession();
