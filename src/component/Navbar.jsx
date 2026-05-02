@@ -57,7 +57,14 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <ul className="flex items-center gap-5 text-sm">
+            <li>
+              <Link href={"/sign-up"}><button className="btn btn-primary">SignUp</button></Link>
+            </li>
+            <li>
+              <Link href={"/sign-in"}><button className="btn btn-primary">SignIn</button></Link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "TileVista – Discover Your Perfect Tile Aesthetic",
-  description: "Find, explore, and choose premium tiles for your dream interior with ease.",
+  description:
+    "Find, explore, and choose premium tiles for your dream interior with ease.",
 };
 
 export default function RootLayout({ children }) {
@@ -26,10 +28,22 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar/>
+        <Navbar />
         <main className="container mx-auto">{children}</main>
-        <Footer/>
-        </body>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
+        <Footer />
+      </body>
     </html>
   );
 }
