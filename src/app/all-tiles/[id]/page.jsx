@@ -5,7 +5,7 @@ const TilesDetailsPage = async({params}) => {
     const {id} = await params; 
     const res = await fetch('https://tile-vista.vercel.app/data.json')
     const tiles = await res.json()
-    const tilesDetails = tiles.filter(tile => tile.id === id)
+    const tilesDetails = tiles.find(tile => tile.id === id)
     console.log(tilesDetails)
     return (
         <div>
