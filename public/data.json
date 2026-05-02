@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with blue glaze finish",
+    "image": "https://as1.ftcdn.net/v2/jpg/01/90/67/44/1000_F_190674414_cbSpItC3svzcCXH1qUOAZg5aEjuWGEXj.jpg",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Marble White Tile",
+    "description": "Elegant white marble tile with natural veins",
+    "image": "https://img.magnific.com/free-photo/marble-white-textured-background_53876-107995.jpg?semt=ais_hybrid&w=740&q=80",
+    "category": "marble",
+    "price": 79.99,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Marble",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Granite Black Tile",
+    "description": "Durable black granite tile for modern interiors",
+    "image": "https://gemstonesinc.ca/wp-content/uploads/2019/11/Black-Galaxy-840x537.jpg",
+    "category": "granite",
+    "price": 65.5,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Granite",
+    "inStock": false
+  },
+  {
+    "id": "tile_004",
+    "title": "Wooden Texture Tile",
+    "description": "Tile with realistic wooden texture finish",
+    "image": "https://img.magnific.com/free-photo/wooden_1127-2950.jpg?semt=ais_hybrid&w=740&q=80",
+    "category": "wood",
+    "price": 39.99,
+    "currency": "USD",
+    "dimensions": "120x20 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_005",
+    "title": "Geometric Pattern Tile",
+    "description": "Modern geometric patterned tile design",
+    "image": "https://img.magnific.com/free-photo/black-white-plate-geometric-pattern-floor-minimalist-design_169016-25290.jpg?semt=ais_hybrid&w=740&q=80",
+    "category": "decorative",
+    "price": 55.75,
+    "currency": "USD",
+    "dimensions": "50x50 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_006",
+    "title": "Glossy Beige Tile",
+    "description": "Smooth glossy tile with beige tone",
+    "image": "https://rflandscapeproducts.co.uk/wp-content/uploads/2024/01/Crema-Beige.jpg",
+    "category": "ceramic",
+    "price": 42.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_007",
+    "title": "Rustic Stone Tile",
+    "description": "Natural stone look tile with rustic feel",
+    "image": "https://img.magnific.com/free-photo/distressed-mosaic-tile-background-texture_191095-100200.jpg?semt=ais_hybrid&w=740&q=80",
+    "category": "stone",
+    "price": 68.2,
+    "currency": "USD",
+    "dimensions": "70x70 cm",
+    "material": "Stone",
+    "inStock": false
+  },
+  {
+    "id": "tile_008",
+    "title": "Matte Grey Tile",
+    "description": "Minimalist matte grey tile for modern homes",
+    "image": "https://www.novoceram.com/wp-content/uploads/sites/4/2023/07/azimut-froid-600x400.jpg",
+    "category": "ceramic",
+    "price": 47.3,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_009",
+    "title": "Mosaic Art Tile",
+    "description": "Colorful mosaic tile for artistic walls",
+    "image": "https://shop.intessere.com/cdn/shop/files/contattaci_f38e208d-d375-4aaa-9852-0a76fcfc5606.jpg?v=1689928099&width=1500",
+    "category": "mosaic",
+    "price": 59.99,
+    "currency": "USD",
+    "dimensions": "30x30 cm",
+    "material": "Glass",
+    "inStock": true
+  },
+  {
+    "id": "tile_010",
+    "title": "Luxury Gold Accent Tile",
+    "description": "Premium tile with gold accent detailing",
+    "image": "https://image.made-in-china.com/202f0j00cFCqeRKESykM/Luxury-Interior-600X1200mm-Living-Room-White-and-Gold-Marble-Floor-Tile.webp",
+    "category": "luxury",
+    "price": 99.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": false
+  }
+]
