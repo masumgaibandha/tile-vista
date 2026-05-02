@@ -45,7 +45,7 @@ const Navbar = () => {
               </li>
 
               <li>
-                <NavLink href={"/my-profile"}>My Profile</NavLink>
+                <NavLink href={"/profile"}>My Profile</NavLink>
               </li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
             </li>
 
             <li>
-              <NavLink href={"/my-profile"}>My Profile</NavLink>
+              <NavLink href={"/profile"}>My Profile</NavLink>
             </li>
           </ul>
         </div>
