@@ -5,12 +5,12 @@ const TopTilesCard = ({tile}) => {
 
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm">
-        <figure>
+      <div className="card bg-base-100 shadow-sm border border-gray-200 rounded-2xl">
+        <figure className="relative aspect-square w-full">
           <Image
-          className="h-68 w-80 rounded-2xl object-cover"
-            width={300}
-            height={300}
+          className=" rounded-2xl object-cover "
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             src={tile.image}
             alt="Shoes"
           />
