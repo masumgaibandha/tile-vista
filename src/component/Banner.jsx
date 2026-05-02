@@ -2,9 +2,9 @@ const Banner = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('https://i.ibb.co/6pgmK43/banner.jpg')",
+        backgroundImage: "url('https://i.ibb.co/6pgmK43/banner.jpg') ",
       }}
-      className="hero min-h-[600px] bg-cover bg-center"
+      className="hero min-h-[600px] bg-cover bg-center container mx-auto"
     >
       <div className="hero-overlay bg-black/60"></div>
 
