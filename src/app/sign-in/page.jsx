@@ -1,6 +1,5 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
 import {
   Button,
   Card,
@@ -12,6 +11,7 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
 export default function SignInPage() {
@@ -32,6 +32,12 @@ export default function SignInPage() {
       toast.success("SignIn Successful");
     }
   };
+
+  const handleGoogleSignIn = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+};
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
@@ -63,6 +69,7 @@ export default function SignInPage() {
           </Link>
         </p>
       </Form>
+      <button onClick={handleGoogleSignIn} className="btn w-1/2 mx-auto"><FcGoogle size={20} />Sign in with Google</button>
     </Card>
   );
 }
