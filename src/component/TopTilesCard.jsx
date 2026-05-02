@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const TopTilesCard = ({tile}) => {
@@ -22,7 +23,7 @@ const TopTilesCard = ({tile}) => {
             <span className="font-bold">$ {tile.price}</span>
             <span className="font-bold">{tile.category}</span>
           </div>
-          <button className="btn btn-primary">View Details</button>
+          <Link href={`/all-tiles/${tile.id}`}><button className="btn btn-primary w-full">View Details</button></Link>
         </div>
       </div>
     </div>

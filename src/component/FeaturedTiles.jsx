@@ -6,7 +6,7 @@ const FeaturedTiles = async () => {
   const res = await fetch("https://tile-vista.vercel.app/data.json");
   const tiles = await res.json();
   const topTiles = tiles.slice(0,8)
-  console.log(topTiles);
+
   return (
     <div className="my-6">
       <h2 className="text-2xl font-bold">Top Tiles</h2>
