@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Banner = () => {
   return (
     <div
@@ -17,7 +19,7 @@ const Banner = () => {
             Explore a wide collection of premium tiles including ceramic,
             marble, and modern designs to transform your space beautifully.
           </p>
-          <button className="btn btn-primary">Browse Tiles</button>
+          <Link href={'/all-tiles'}><button className="btn btn-primary">Browse Tiles</button></Link>
         </div>
       </div>
     </div>

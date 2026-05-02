@@ -5,7 +5,7 @@ const TopTilesCard = ({tile}) => {
 
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm border border-gray-200 rounded-2xl">
+      <div className="card bg-base-100 shadow-sm border border-gray-200 rounded-2xl p-2">
         <figure className="relative aspect-square w-full">
           <Image
           className=" rounded-2xl object-cover "
