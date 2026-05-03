@@ -6,7 +6,7 @@ const FeaturedTiles = async () => {
     next: { revalidate: 3600 },
   });
   const tiles = await res.json();
-  const topTiles = tiles.slice(0, 8);
+  const topTiles = tiles.slice(0, 4);
 
   return (
     <section className="my-16 container mx-auto px-4 sm:px-6">
