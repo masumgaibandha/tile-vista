@@ -28,11 +28,7 @@ const TopTilesCard = ({ tile }) => {
   const badgeClass = categoryColors[category] ?? "bg-stone-100 text-stone-600";
 
   return (
-    <div
-      className="group bg-white rounded-2xl overflow-hidden border border-stone-200
-                    hover:border-amber-200 hover:shadow-[0_8px_32px_rgba(180,83,9,0.1)]
-                    transition-all duration-300 flex flex-col"
-    >
+    <div className="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-amber-200 hover:shadow-[0_8px_32px_rgba(180,83,9,0.1)] transition-all duration-300 flex flex-col">
       {/* Image */}
       <div className="relative aspect-square overflow-hidden">
         <Image
@@ -45,9 +41,7 @@ const TopTilesCard = ({ tile }) => {
 
         {/* Category badge */}
         <span
-          className={`absolute top-3 left-3 z-10 text-[11px] font-medium tracking-wide
-                          uppercase px-3 py-1 rounded-full ${badgeClass}
-                          backdrop-blur-sm bg-opacity-90`}
+          className={`absolute top-3 left-3 z-10 text-[11px] font-medium tracking-wide uppercase px-3 py-1 rounded-full ${badgeClass} backdrop-blur-sm bg-opacity-90`}
         >
           {category}
         </span>
@@ -55,10 +49,7 @@ const TopTilesCard = ({ tile }) => {
         {/* Out of stock */}
         {!inStock && (
           <div className="absolute inset-0 bg-stone-900/50 flex items-center justify-center z-10">
-            <span
-              className="bg-stone-900/80 text-stone-200 text-xs font-medium tracking-widest
-                             uppercase px-4 py-2 rounded-full"
-            >
+            <span className="bg-stone-900/80 text-stone-200 text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-full">
               Out of Stock
             </span>
           </div>
@@ -94,13 +85,7 @@ const TopTilesCard = ({ tile }) => {
 
         <Link
           href={`/all-tiles/${id}`}
-          className={`block w-full text-center text-sm font-medium py-2.5 rounded-xl
-                      transition-all duration-200
-                      ${
-                        inStock
-                          ? "bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white shadow-sm"
-                          : "bg-stone-100 text-stone-400 pointer-events-none cursor-not-allowed"
-                      }`}
+          className={`block w-full text-center text-sm font-medium py-2.5 rounded-xl transition-all duration-200 ${inStock ? "bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white shadow-sm" : "bg-stone-100 text-stone-400 pointer-events-none cursor-not-allowed"}`}
         >
           {inStock ? "View Details" : "Unavailable"}
         </Link>
