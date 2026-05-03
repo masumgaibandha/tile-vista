@@ -41,35 +41,39 @@ const tiles = [
 
 const Banner = () => {
   return (
-    <section className="container mx-auto rounded-2xl overflow-hidden grid grid-cols-2 min-h-[580px]">
+    <section className="container mx-auto rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 min-h-[420px] lg:min-h-[580px]">
       {/* Left — content */}
       <div
-        className="bg-[#1a1208] px-14 py-16 flex flex-col justify-center relative z-10
-                      after:content-[''] after:absolute after:top-0 after:right-0 after:bottom-0
-                      after:w-10 after:bg-[#1a1208] after:[clip-path:polygon(0_0,0_100%,100%_100%)] after:z-10"
+        className="bg-[#1a1208] px-8 sm:px-12 lg:px-14 py-12 lg:py-16 flex flex-col justify-center relative z-10
+                      lg:after:content-[''] lg:after:absolute lg:after:top-0 lg:after:right-0 lg:after:bottom-0
+                      lg:after:w-10 lg:after:bg-[#1a1208] lg:after:[clip-path:polygon(0_0,0_100%,100%_100%)] lg:after:z-10"
       >
-        <div className="flex items-center gap-3 mb-5">
+        {/* Eyebrow */}
+        <div className="flex items-center gap-3 mb-4 lg:mb-5">
           <span className="block w-7 h-px bg-amber-600" />
           <span className="text-amber-600 text-[11px] font-medium tracking-[3px] uppercase">
             Premium Collection
           </span>
         </div>
 
-        <h1 className="font-playfair text-5xl font-bold leading-[1.15] text-stone-50 mb-5">
+        {/* Heading */}
+        <h1 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.15] text-stone-50 mb-4 lg:mb-5">
           Find Tiles That <em className="text-amber-500 not-italic">Define</em>{" "}
           Your Space
         </h1>
 
-        <p className="text-[#a89880] text-[15px] leading-relaxed mb-9 max-w-sm">
+        {/* Description */}
+        <p className="text-[#a89880] text-sm lg:text-[15px] leading-relaxed mb-7 lg:mb-9 max-w-sm">
           From classic marble to bold geometric designs — discover handpicked
           premium tiles for every aesthetic.
         </p>
 
-        <div className="flex items-center gap-5">
+        {/* CTAs */}
+        <div className="flex flex-wrap items-center gap-4">
           <Link
             href="/all-tiles"
             className="bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-sm font-medium
-                       px-8 py-3.5 rounded-full transition-colors duration-200 shadow-md"
+                       px-6 lg:px-8 py-3 lg:py-3.5 rounded-full transition-colors duration-200 shadow-md"
           >
             Browse All Tiles →
           </Link>
@@ -85,20 +89,21 @@ const Banner = () => {
               strokeWidth={1.5}
             >
               <circle cx="11" cy="11" r="8" />
-              <path d="m21 21-4.35-4.35" />
+              <path d={"m21 21-4.35-4.35"} />
             </svg>
             Filter by style
           </Link>
         </div>
 
-        <div className="flex gap-8 mt-12 pt-8 border-t border-[#2e2010]">
+        {/* Stats */}
+        <div className="flex gap-6 lg:gap-8 mt-8 lg:mt-12 pt-6 lg:pt-8 border-t border-[#2e2010]">
           {[
             { num: "10+", label: "Categories" },
             { num: "200+", label: "Premium tiles" },
             { num: "100%", label: "Satisfaction" },
           ].map(({ num, label }) => (
             <div key={label}>
-              <div className="font-playfair text-2xl font-bold text-stone-50">
+              <div className="font-playfair text-xl lg:text-2xl font-bold text-stone-50">
                 {num}
               </div>
               <div className="text-xs text-[#6b5a47] mt-1 tracking-wide">
@@ -109,8 +114,8 @@ const Banner = () => {
         </div>
       </div>
 
-      {/* Right — tile mosaic */}
-      <div className="relative overflow-hidden">
+      {/* Right — tile mosaic (hidden on mobile) */}
+      <div className="relative overflow-hidden hidden lg:block">
         <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#1a1208] to-transparent z-10 pointer-events-none" />
         <div className="grid grid-cols-3 grid-rows-3 h-full gap-[3px]">
           {tiles.map((tile) => (
@@ -122,12 +127,25 @@ const Banner = () => {
                 src={tile.src}
                 alt={tile.alt}
                 fill
-                sizes="(max-width: 768px) 33vw, 20vw"
+                sizes="(max-width: 1024px) 0vw, 20vw"
                 className="object-cover transition-transform duration-500 hover:scale-110"
               />
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Mobile-only image strip */}
+      <div className="relative h-48 sm:h-64 lg:hidden overflow-hidden">
+        <Image
+          src={tiles[0].src}
+          alt="Featured tile"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1208]/60 to-transparent" />
       </div>
     </section>
   );
